@@ -1,8 +1,13 @@
-import React, { Component }  from 'react';
+import React, {Component} from 'react';
 
 export default class Search extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {term: ''};
+    }
+
     onInputChange(event) {
-        console.log(event.target.value);
+        
     };
 
     render() {
