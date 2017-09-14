@@ -6,13 +6,13 @@ export default class Search extends Component {
         this.state = {term: ''};
     }
 
-    onInputChange(event) {
-        
+    onInputChange = (event) =>{
+        this.setState({term: event.target.value})
     };
 
     render() {
         return (
-            <input type="text" onChange={this.onInputChange}/>
-        )
+            <input type="text" value={this.state.term} onChange={this.onInputChange}/>
+        );
     }
 };
